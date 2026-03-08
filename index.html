@@ -2,26 +2,37 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <title>Nuno Sabino - Home</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="#">Home</a>
-        <a href="research.html">Research</a>
-        <a href="ctf.html">Capture-the-flag Competitions</a>
+    <header class="site-header">
+      <nav class="site-nav">
+        <span class="site-name mono">nuno@sabino ~ $</span>
+        <div class="nav-links">
+          <a href="#" class="nav-active">Home</a>
+          <a href="research.html">Research</a>
+          <a href="ctf.html">Capture-the-flag Competitions</a>
+        </div>
       </nav>
     </header>
-    <img width="300" src="foto.jpg" alt="My Photo should have loaded here">
-    <h1>Welcome!</h1>
-    <br>
-    <main>
-      <h2>Overview</h2>
-      <p>In my doctoral degree at Carnegie Mellon University and Instituto Superior Tecnico, I specialized in fuzzing, a technique for discovering software vulnerabilities by generating malformed or unexpected inputs and feeding them to programs. My goal is to increase the security of software by developing automated tools for vulnerability detection.</p>
+    <main class="container">
+      <img class="profile-photo" src="foto.jpg" alt="Nuno Sabino">
+      <h1 class="page-title">Nuno Sabino</h1>
+      <p class="subtitle">
+        PhD in Computer Science &middot; Carnegie Mellon University<br>
+        <span class="mono">fuzzing / vulnerability detection / cryptography</span>
+      </p>
+      <section class="bio-section">
+        <h2>Overview</h2>
+        <p>In my doctoral degree at Carnegie Mellon University and Instituto Superior Tecnico, I specialized in fuzzing, a technique for discovering software vulnerabilities by generating malformed or unexpected inputs and feeding them to programs. My goal is to increase the security of software by developing automated tools for vulnerability detection.</p>
+      </section>
     </main>
-    <footer>
+    <footer class="site-footer">
       <nav>
-        <a href="#">Home</a>
+        <a href="#" class="nav-active">Home</a>
         <a href="research.html">Research</a>
         <a href="ctf.html">Capture-the-flag Competitions</a>
       </nav>

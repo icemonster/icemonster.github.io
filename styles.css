@@ -1,75 +1,390 @@
+/* ============================================================
+   RESET & CUSTOM PROPERTIES
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-primary:   #0d1117;
+  --bg-secondary: #161b22;
+  --bg-surface:   #1c2128;
+  --border:       #30363d;
+  --text-primary: #e6edf3;
+  --text-muted:   #8b949e;
+  --accent:       #39d353;
+  --accent-dim:   #1a4a2a;
+  --link:         #58a6ff;
+  --link-hover:   #79c0ff;
+  --font-sans:    'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    background-color: #fff;
-    color: #333;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-  }
-  
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  h1, h2, h3 {
-    font-weight: bold;
-    margin: 20px 0;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    text-align: center;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-  }
-  
-  h3 {
-    font-size: 2rem;
-  }
-  
-  p {
-    margin-bottom: 20px;
-  }
-  
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #666;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    display: block;
-    margin: auto;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main.container {
+  flex: 1;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+h1, h2, h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+}
+
+/* ============================================================
+   HEADER & NAVIGATION
+   ============================================================ */
+
+.site-header {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-nav {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+
+.site-name {
+  color: var(--accent);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-surface);
+  text-decoration: none;
+}
+
+.nav-links a.nav-active {
+  color: var(--accent);
+  background-color: var(--accent-dim);
+}
+
+/* ============================================================
+   PROFILE PHOTO
+   ============================================================ */
+
+.profile-photo {
+  display: block;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 2rem auto 1.5rem;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-dim), 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================================
+   HOME PAGE
+   ============================================================ */
+
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.subtitle .mono {
+  display: inline-block;
+  margin-top: 0.4rem;
+  color: var(--accent);
+}
+
+/* ============================================================
+   PUBLICATIONS LIST
+   ============================================================ */
+
+.pub-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.pub-list li {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  padding: 1rem 1.25rem;
+  line-height: 1.6;
+  transition: border-left-color 0.15s ease, background-color 0.15s ease;
+}
+
+.pub-list li:hover {
+  background-color: #222830;
+  border-left-color: var(--link-hover);
+}
+
+.pub-list li a {
+  font-weight: 600;
+  font-size: 0.975rem;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.pub-list .authors {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.pub-list .venue {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ============================================================
+   SERVICE LIST (Artifact Review)
+   ============================================================ */
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.service-list li {
+  padding: 0.5rem 0.75rem;
+  border-left: 2px solid var(--border);
+  font-size: 0.9rem;
+  transition: border-left-color 0.15s ease;
+}
+
+.service-list li:hover {
+  border-left-color: var(--accent);
+}
+
+.service-list li a {
+  color: var(--text-primary);
+}
+
+/* ============================================================
+   CTF PAGE
+   ============================================================ */
+
+.writeup-list,
+.award-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.writeup-list li,
+.award-list li {
+  padding: 0.5rem 0.75rem;
+  border-left: 2px solid var(--border);
+  font-size: 0.9rem;
+  border-radius: 0 4px 4px 0;
+  transition: border-left-color 0.15s ease, background-color 0.15s ease;
+}
+
+.writeup-list li:hover,
+.award-list li:hover {
+  border-left-color: var(--accent);
+  background-color: var(--bg-surface);
+}
+
+.tool-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tool-list li {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  transition: border-color 0.15s ease;
+}
+
+.tool-list li:hover {
+  border-color: var(--accent);
+}
+
+.tool-list li a {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.site-footer {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 0 1.5rem;
+}
+
+.site-footer nav {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  height: 48px;
+}
+
+.site-footer nav a {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: color 0.15s ease;
+}
+
+.site-footer nav a:hover {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.site-footer nav a.nav-active {
+  color: var(--accent);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 600px) {
+  .site-name {
+    display: none;
   }
 
-footer {
-  padding: 40px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-header {
-    padding: 40px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  .nav-links a {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
   }
-footer a {
-    margin-right: 15px;
-}
-header a {
-    margin-right: 15px;
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  main.container {
+    padding: 1.5rem 1rem 3rem;
+  }
 }

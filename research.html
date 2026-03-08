@@ -2,37 +2,56 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <title>Nuno Sabino - Research</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="#">Research</a>
-        <a href="ctf.html">Capture-the-flag Competitions</a>
+    <header class="site-header">
+      <nav class="site-nav">
+        <span class="site-name mono">nuno@sabino ~ $</span>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="#" class="nav-active">Research</a>
+          <a href="ctf.html">Capture-the-flag Competitions</a>
+        </div>
       </nav>
     </header>
-    <img width="300" src="foto.jpg" alt="My Photo should have loaded here">
+    <main class="container">
+      <img class="profile-photo" src="foto.jpg" alt="Nuno Sabino">
 
-    <h2> Publications </h2>
-    Here is a list of my publications:
-    <ul>
-      <li><a href="https://www.ndss-symposium.org/wp-content/uploads/2026-s1467-paper.pdf">DOM-XSS Detection via Webpage Interaction Fuzzing and URL Component Synthesis</a><br>Nuno Sabino, <u>Darion Cassel</u>, Rui Abreu, Pedro Adão, Lujo Bauer, Limin Jia<br>In Proceedings of the 2026 Network and Distributed System Security Symposium (NDSS'26)</li>
-      <li><a href="https://www.ndss-symposium.org/wp-content/uploads/2025-1636-paper.pdf">NODEMEDIC-FINE: Automatic Detection and Exploit Synthesis for Node.js Vulnerabilities</a><br>Darion Cassel, <u>Nuno Sabino</u>, Mindy Hsu, Ruben Martins, Limin Jia<br>In Proceedings of the 2025 Network and Distributed System Security Symposium (NDSS'25)</li>
-      <li><a href="https://2023.ecoop.org/details/ecoop-2023-papers/17/Toward-Tool-Independent-Summaries-for-Symbolic-Execution">Toward Tool-Independent Summaries for Symbolic Execution</a><br>Frederico Ramos, <u>Nuno Sabino</u>, Pedro Adão, David Naumann, José Fragoso Santos <br>In Proceedings of the 37th European Conference on Object-Oriented Programming (ECOOP 2023)</li>
-    </ul>
+      <h2>Publications</h2>
+      <p>Here is a list of my publications:</p>
+      <ul class="pub-list">
+        <li>
+          <a href="https://www.ndss-symposium.org/wp-content/uploads/2026-s1467-paper.pdf">DOM-XSS Detection via Webpage Interaction Fuzzing and URL Component Synthesis</a>
+          <div class="authors">Nuno Sabino, <u>Darion Cassel</u>, Rui Abreu, Pedro Adão, Lujo Bauer, Limin Jia</div>
+          <div class="venue">Network and Distributed System Security Symposium (NDSS'26)</div>
+        </li>
+        <li>
+          <a href="https://www.ndss-symposium.org/wp-content/uploads/2025-1636-paper.pdf">NODEMEDIC-FINE: Automatic Detection and Exploit Synthesis for Node.js Vulnerabilities</a>
+          <div class="authors">Darion Cassel, <u>Nuno Sabino</u>, Mindy Hsu, Ruben Martins, Limin Jia</div>
+          <div class="venue">Network and Distributed System Security Symposium (NDSS'25)</div>
+        </li>
+        <li>
+          <a href="https://2023.ecoop.org/details/ecoop-2023-papers/17/Toward-Tool-Independent-Summaries-for-Symbolic-Execution">Toward Tool-Independent Summaries for Symbolic Execution</a>
+          <div class="authors">Frederico Ramos, <u>Nuno Sabino</u>, Pedro Adão, David Naumann, José Fragoso Santos</div>
+          <div class="venue">37th European Conference on Object-Oriented Programming (ECOOP 2023)</div>
+        </li>
+      </ul>
 
-    <h2> Artifact Review </h2>
-    I was also part of artifact review committees for the following conferences:
-    <ul>
-      <li><a href="https://pldi23.sigplan.org/">PLDI 2023</a></li>
-      <li><a href="https://www.usenix.org/conference/usenixsecurity23">USENIX Security 2023</a></li>
-    </ul>
-
-    <footer>
+      <h2>Artifact Review</h2>
+      <p>I was also part of artifact review committees for the following conferences:</p>
+      <ul class="service-list">
+        <li><a href="https://pldi23.sigplan.org/">PLDI 2023</a></li>
+        <li><a href="https://www.usenix.org/conference/usenixsecurity23">USENIX Security 2023</a></li>
+      </ul>
+    </main>
+    <footer class="site-footer">
       <nav>
         <a href="index.html">Home</a>
-        <a href="#">Research</a>
+        <a href="#" class="nav-active">Research</a>
         <a href="ctf.html">Capture-the-flag Competitions</a>
       </nav>
     </footer>
