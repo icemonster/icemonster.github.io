@@ -154,17 +154,19 @@ a:hover {
    PROFILE PHOTO
    ============================================================ */
 
-.profile-photo {
-  display: block;
+.profile-photo-frame {
   width: 160px;
   height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
   margin: 2rem auto 1.5rem;
+  border-radius: 50%;
   border: 2px solid var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-dim), 0 8px 32px rgba(0, 0, 0, 0.4);
-}
+  box-shadow: 0 0 0 4px var(--accent-dim), 0 8px 32px rgba(0,0,0,0.4);
 
+  background-image: url("foto.jpg");
+  background-repeat: no-repeat;
+  background-size: 107%;
+  background-position: 2% 50%;
+}
 /* ============================================================
    HOME PAGE
    ============================================================ */
@@ -379,10 +381,10 @@ a:hover {
     font-size: 1.2rem;
   }
 
-  .profile-photo {
-    width: 120px;
-    height: 120px;
-  }
+  .profile-photo-frame {
+      width: 120px;
+      height: 120px;
+    }
 
   main.container {
     padding: 1.5rem 1rem 3rem;
